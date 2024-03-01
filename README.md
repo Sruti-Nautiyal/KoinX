@@ -2,11 +2,11 @@
 
 This repository contains the implementation of the KoinX SEO Details Page, a React.js application that fetches and displays cryptocurrency-related information. Below are the details and instructions for running the project.
 
-## Mandatory Tasks:
+## Explaination:
 
 ### Components Implementation:
 
-- All components from the Figma design have been implemented in React.js.
+- All components are made in React.js.
 
 ### Coingecko API Integration:
 
