@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# KoinX 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the implementation of the KoinX SEO Details Page, a React.js application that fetches and displays cryptocurrency-related information. Below are the details and instructions for running the project.
 
-## Available Scripts
+## Mandatory Tasks:
 
-In the project directory, you can run:
+### Components Implementation:
 
-### `npm start`
+- All components from the Figma design have been implemented in React.js.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Coingecko API Integration:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The Coingecko `/simple/price` API is utilized to fetch the price of Bitcoin in USD and INR, along with the 24-hour change.
 
-### `npm test`
+    - API Parameters:
+        - `ids`: `bitcoin`
+        - `vs_currencies`: `inr,usd`
+        - `include_24hr_change`: `true`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### TradingView Chart:
 
-### `npm run build`
+- The TradingView widget is embedded to display the BTCUSD chart, closely resembling the design from the Figma file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Trending Coins Component:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Coingecko's `/search/trending` API is used to fetch the top 3 trending coins, displayed in the "Trending Coins" component on the right.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### You May Also Like Section:
 
-### `npm run eject`
+- The "You May Also Like" section shows a horizontally scrollable carousel with the logo, symbol, price, price change, and price graph of the trending coins fetched from the previous API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Responsive UI:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The UI is designed to be responsive.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Hosting and Deployment:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- The code is hosted on GitHub: [GitHub Repository](https://github.com/Sruti-Nautiyal/KoinX)
+- The application is deployed using Vercel: [Live Demo](https://koin-x-inky.vercel.app/)
 
-## Learn More
+## Optional Task:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Dynamic Token Display:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The application supports dynamic token display based on the URL. For example, `/bitcoin` shows Bitcoin's data and chart, and `/ethereum` shows Ethereum's data and chart.
 
-### Code Splitting
+- The Coingecko `/coins/{id}` API is used to fetch the symbol of the coin, enabling the rendering of the relevant price chart from TradingView.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## How to Run:
 
-### Analyzing the Bundle Size
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```bash
+    https://github.com/Sruti-Nautiyal/KoinX.git
+    ```
 
-### Making a Progressive Web App
+2. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```bash
+    cd koinX
+    npm install
+    ```
 
-### Advanced Configuration
+3. Run the application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    ```bash
+    npm start
+    ```
 
-### Deployment
+4. Open your browser and go to `http://localhost:3000` to view the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributions:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions to this project are welcome. Feel free to open issues and pull requests for any improvements or fixes.
